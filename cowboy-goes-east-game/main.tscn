@@ -1,0 +1,9 @@
+[gd_scene format=2]
+
+[node name="main" type="Node"]
+
+[node name="game" type="Node" parent="."]
+
+[node name="managers" type="Node" parent="."]
+
+[node name="ui" type="Node" parent="."]
