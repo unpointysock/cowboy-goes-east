@@ -1,29 +1,27 @@
 extends KinematicBody2D
 
+onready var player_data = get_node("/root/PlayerData")
+
+export (int) var marg = 16
+export (int) var health = 3
+export (int) var acceleration = 800
+export (int) var maxSpeed = 150
+export (int) var friction = 4000
+
 var screen_size : Vector2
-export (int) var marg
-
-export (int) var health
-export (int) var acceleration
-export (int) var maxSpeed
-export (int) var friction
-
 var velocity : Vector2
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	screen_size = get_viewport_rect().size
-	marg = 0
-	health = 3
-	acceleration = 750
-	maxSpeed = 325
-	friction = 2800
-	velocity = Vector2.ZERO
+#	dont set export vars on ready, it will just overwrite them
+# 	defaults can go up where they're declared
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
 	move_state(delta)
 	position.x = clamp(position.x, marg, (screen_size.x - marg))
+	player_data.player_pos = position
 
 # Called every frame to change the velocity of the player according to input
 func move_state(delta):
@@ -33,7 +31,7 @@ func move_state(delta):
 	input_vector = input_vector.normalized()
 	
 	if input_vector != Vector2.ZERO:
-		velocity = velocity.move_toward(input_vector * maxSpeed, acceleration * delta)
+		velocity = velocity.move_toward(input_vector * maxSpeed, acceleration * delta + friction * delta)
 	else:
 		velocity = velocity.move_toward(Vector2.ZERO, friction * delta)
 	

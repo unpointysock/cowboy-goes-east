@@ -1,4 +1,4 @@
-extends "res://scripts/enemy.gd"
+extends "res://scenes/enemies/enemy.gd"
 
 #onready var playerSingleton = get_tree().get_root().find_node("player")
 
@@ -15,12 +15,12 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _physics_process(delta):
+func _physics_process(_delta):
 	#chase(delta, playerSingleton)
 	pass
 
 # Called in __physics_process() to translate the enem
-func __move_state(delta):
+func __move_state(_delta):
 	pass
 	
 func chase(delta, player):

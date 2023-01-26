@@ -16,13 +16,13 @@ func _ready():
 	velocity = Vector2.ZERO
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _physics_process(delta):
+func _physics_process(_delta):
 	pass
 	
 # Called when the enemy first spawns into the map
-func spawn(delta):
+func spawn(_delta):
 	pass
 	
 # Called when the enemy is killed
-func despawn(delta):
+func despawn(_delta):
 	pass
