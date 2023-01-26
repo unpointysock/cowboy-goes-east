@@ -8,8 +8,8 @@
 [ext_resource path="res://assets/patrick/environment_art/16px/canyon-walls-0004.png" type="Texture" id=6]
 [ext_resource path="res://assets/patrick/environment_art/16px/canyon-walls-0003.png" type="Texture" id=7]
 [ext_resource path="res://assets/patrick/environment_art/32px/road-0001.png" type="Texture" id=8]
-[ext_resource path="res://scenes/player.tscn" type="PackedScene" id=9]
-[ext_resource path="res://scenes/bat.tscn" type="PackedScene" id=10]
+[ext_resource path="res://scenes/player/Player.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scenes/enemies/Bat.tscn" type="PackedScene" id=10]
 
 [sub_resource type="ConvexPolygonShape2D" id=2]
 points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
