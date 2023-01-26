@@ -217,10 +217,10 @@ cell_size = Vector2( 16, 16 )
 format = 1
 tile_data = PoolIntArray( 524291, 0, 0, 524292, 0, 0, 524293, 0, 0, 524294, 0, 0, 524295, 0, 0, 524296, 0, 0, 524297, 0, 0, 524298, 0, 0, 524299, 0, 0, 524300, 0, 0, 524301, 0, 0, 524302, 0, 0, 524303, 0, 0, 524304, 0, 0, 524305, 0, 0, 524306, 0, 0, 524307, 0, 0 )
 
-[node name="player" parent="game" instance=ExtResource( 9 )]
+[node name="Player" parent="game" instance=ExtResource( 9 )]
 position = Vector2( 15, 42 )
 
-[node name="bat1" parent="game" instance=ExtResource( 10 )]
+[node name="Bat1" parent="game" instance=ExtResource( 10 )]
 position = Vector2( 267, 55 )
 
 [node name="managers" type="Node" parent="."]

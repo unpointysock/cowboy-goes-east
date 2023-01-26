@@ -1,6 +1,5 @@
-extends "res://scripts/enemy.gd"
-
-#onready var playerSingleton = get_tree().get_root().find_node("player")
+extends Enemy
+class_name Bat
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -8,11 +7,10 @@ func _ready():
 	marg = 0
 	health = 1
 	acceleration = 200
-	maxSpeed = 325
+	max_speed = 325
 	friction = 2800
 	velocity = Vector2.ZERO
 	
-
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):

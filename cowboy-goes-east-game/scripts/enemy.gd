@@ -1,14 +1,6 @@
-extends KinematicBody2D
+extends Actor
+class_name Enemy
 
-var screen_size : Vector2
-export (int) var marg
-
-export (int) var health
-export (int) var acceleration
-export (int) var maxSpeed
-export (int) var friction
-
-var velocity : Vector2
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
