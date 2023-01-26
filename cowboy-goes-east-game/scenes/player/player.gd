@@ -1,7 +1,5 @@
 extends KinematicBody2D
 
-onready var player_data = get_node("/root/PlayerData")
-
 export (int) var marg = 16
 export (int) var health = 3
 export (int) var acceleration = 800
@@ -21,7 +19,7 @@ func _ready():
 func _physics_process(delta):
 	move_state(delta)
 	position.x = clamp(position.x, marg, (screen_size.x - marg))
-	player_data.player_pos = position
+	PlayerData.player_pos = position
 
 # Called every frame to change the velocity of the player according to input
 func move_state(delta):
