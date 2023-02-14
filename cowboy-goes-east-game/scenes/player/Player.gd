@@ -18,7 +18,7 @@ func _ready():
 func _physics_process(delta):
 	move_state(delta)
 	position.x = clamp(position.x, marg, (screen_size.x - marg))
-	._physics_process(delta)
+	velocity = move_and_slide(velocity)
 
 # Called every frame to change the velocity of the player according to input
 func move_state(delta):

@@ -57,7 +57,3 @@ shape = SubResource( 4 )
 position = Vector2( 0, -1 )
 rotation = 1.5708
 shape = SubResource( 5 )
-
-[node name="pause_timer" type="Timer" parent="." index="4"]
-pause_mode = 1
-wait_time = 3.5

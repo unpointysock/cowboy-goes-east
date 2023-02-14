@@ -5,10 +5,10 @@ class_name Bat
 func _ready():
 	screen_size = get_viewport_rect().size
 	marg = 0
-	health = 500
-	acceleration = 200
-	max_speed = 325
-	friction = 2800
+	health = 1000
+	acceleration = 30
+	max_speed = 25
+	friction = 100000
 	velocity = Vector2.ZERO
 	spawn_delay = 2.0
 	spawn_radius = 500.0
